@@ -1,0 +1,36 @@
+.contact-btn {
+    padding: 10px 20px  ;
+    background-color: #fff;
+    color: #000 !important;
+    border-radius: 20px;
+}
+.mobile-btn {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: .8rem;
+    padding: 13px 20px;
+    border-radius: 20px;
+    background: #fcca03
+}
+
+.dark-cyan {
+    color: hsl(167, 40%, 24%);
+}
+
+.dark-blue {
+    color: hsl(198, 62%, 26%);
+}
+
+.spacing-sm {
+    margin-bottom: 4rem;
+}
+
+@media all and (max-width: $mobile_size) {
+    .hidden {
+        display: none !important;
+    }
+}
+
+.visible {
+    transform: translate(0, 0) !important;
+}

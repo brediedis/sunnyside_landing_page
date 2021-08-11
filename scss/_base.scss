@@ -1,0 +1,60 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+html, body, h1, h2, h3, p, section {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+$html-font-size: 18px;
+
+html {
+    height: 100%;
+    width: 100%;
+    font-size: $html-font-size;
+    scroll-behavior: smooth;
+}
+
+body {
+    max-width: 1440px;
+    margin: auto;
+}
+
+// variables
+$gray:          hsl(210, 4%, 67%);
+$footer_text:     darken(#2C7566, 5%);
+$mobile_size:     750px;
+$font_fraunces:   'Fraunces', serif;
+$font_barlow:     'Barlow', sans-serif;
+$white_filter:    brightness(0) invert(1);
+
+h2 {
+    font-family: $font_fraunces;
+}
+p {
+    font-family: $font_barlow;
+}
+
+// functions 
+@function stripUnit($value) {
+    @return $value / ($value * 0 + 1);
+}
+@function rem($pxValue) {
+    @return #{stripUnit($pxValue) / stripUnit($html-font-size)}rem;
+}
